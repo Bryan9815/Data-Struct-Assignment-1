@@ -10,7 +10,7 @@ public:
 	Outfit(const string&, const int&, const int &);
 	~Outfit();
 
-	const in getSPECIAL();
+	const int getSPECIAL();
 private:
 	const int kSPECIAL;
 protected:
