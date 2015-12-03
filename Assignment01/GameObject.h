@@ -2,6 +2,7 @@
 #define GAMEOBJECT_H
 
 #include <string>
+#include <iostream>
 
 using std::string;
 

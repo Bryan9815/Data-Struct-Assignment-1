@@ -33,14 +33,14 @@ public:
 
 	bool isDead();
 private:
-	Vec2D position;
-	int SPECIAL;
-	int health;
-	int radiation;
-	int stimpak;
-	int radaway;
-	Outfit *outfit;
-	Weapon *weapon;
+	Vec2D position_;
+	int SPECIAL_;
+	int health_;
+	int radiation_;
+	int stimpak_;
+	int radaway_;
+	Outfit *outfit_;
+	Weapon *weapon_;
 protected:
 
 };
