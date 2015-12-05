@@ -2,7 +2,6 @@
 #define GAMEOBJECT_H
 
 #include <string>
-#include <iostream>
 
 using std::string;
 
@@ -13,10 +12,10 @@ public:
 	~GameObject();
 
 	string getName(void);
-	int getCount();
+	static int getCount();
 private:
 	const string kName;
-	int count;
+	static int count;
 protected:
 	GameObject(const string&);
 };
