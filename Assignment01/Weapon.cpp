@@ -1,11 +1,11 @@
 #include "Weapon.h"
 
-Weapon::Weapon()
+Weapon::Weapon() : kAttackDmg(kAttackDmg)
 {
 
 }
 
-Weapon::Weapon(const string& kName, const int& durability, const int&kAttackDmg)
+Weapon::Weapon(const string& kName, const int& durability, const int&kAttackDmg) : kAttackDmg(kAttackDmg)
 {
 
 }
