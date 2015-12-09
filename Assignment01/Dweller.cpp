@@ -2,14 +2,19 @@
 
 Dweller::Dweller()
 {
-
+	
 }
 
-Dweller::Dweller(const string& kName, const int& Count) : Outfit(*outfit_), Weapon(*weapon_)
+Dweller::Dweller(const string& kName, const int& SPECIAL_) : Outfit(*outfit_), Weapon(*weapon_)
 {
 	const string& kName = "Dweller";
 
-	const int& Count = 2;
+	
+}
+
+Dweller::~Dweller()
+{
+	
 }
 
 const int Dweller::getSPECIAL()
@@ -45,11 +50,31 @@ const Vec2D Dweller::getPosition()
 
 void Dweller::receiveHealthDamage(const int& health_)
 {
+	if (health_ < 1)
+	{
+		cout << "Dweller has died" << endl;
+	}
+
+	if (health_ >(100 - radiation_))
+	{
+		this->health_ = (100 - radiation_);
+	}
+
+	this->health_ = 100;
 	this->health_ = health_;
 }
 
 void Dweller::receiveRadDamage(const int& radiation_)
 {
+	if (radiation_ > 100)
+	{
+		this->radiation_ = 100;
+	}
+	if (radiation_ < 0)
+	{
+		this->radiation_ = 0;
+	}
+	this->radiation_ = 0;
 	this->radiation_ = radiation_;
 }
 
@@ -60,30 +85,32 @@ void Dweller::receiveEquipmentDamage(const int&)
 
 void Dweller::addStimpak(const int& stimpak_)
 {
+	this->stimpak_ = 0;
 	this->stimpak_ = stimpak_;
 }
 
 void Dweller::addRadAway(const int& radaway_)
 {
+	this->radaway_ = 0;
 	this->radaway_ = radaway_;
 }
 
 void Dweller::useStimpak()
 {
-	
+	++health_;
 }
 
 void Dweller::useRadAway()
 {
-	
+	--radiation_;
 }
 
 Outfit* Dweller::assignOutfit(Outfit*)
 {
-	return 0;
+	Outfit* assignOutfit = 0;
 }
 
 Weapon* Dweller::assignWeapon(Weapon*)
 {
-	return 0;
+	Weapon* assignWeapon = 0;
 }
