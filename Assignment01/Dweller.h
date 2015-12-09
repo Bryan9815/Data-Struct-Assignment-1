@@ -8,6 +8,7 @@
 class Dweller : public Outfit, Weapon
 {
 public:
+	Dweller();
 	Dweller(const string&, const int&);
 	~Dweller();
 	

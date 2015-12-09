@@ -15,7 +15,7 @@ public:
 private:
 
 protected:
-	int durability;
+	int durability_;
 };
 
 #endif //ITEM_H

@@ -5,17 +5,17 @@ Item::Item()
 
 }
 
-Item::Item(const string& kName, const int& durability)
+Item::Item(const string& kName, const int& durability_)
 {
 
 }
 
-void Item::receiveDamage(const int& durability)
+void Item::receiveDamage(const int& durability_)
 {
-	this->durability = durability;
+	this->durability_ = durability_;
 }
 
 const int Item::getDurability()
 {
-	return durability;
+	return durability_;
 }

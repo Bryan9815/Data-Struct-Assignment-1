@@ -1,8 +1,15 @@
 #include "Dweller.h"
 
-Dweller::Dweller(const string& Dweller, const int& SPECIAL_) : Outfit(*outfit_), Weapon(*weapon_)
+Dweller::Dweller()
 {
-	
+
+}
+
+Dweller::Dweller(const string& kName, const int& Count) : Outfit(*outfit_), Weapon(*weapon_)
+{
+	const string& kName = "Dweller";
+
+	const int& Count = 2;
 }
 
 const int Dweller::getSPECIAL()
@@ -27,6 +34,7 @@ const int Dweller::getAttackDmg()
 
 void Dweller::setPosition(const Vec2D& position_)
 {
+	this->position_ = Vec2D(0, 0);
 	this->position_ = position_;
 }
 
