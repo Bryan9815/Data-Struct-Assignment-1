@@ -97,12 +97,12 @@ void Dweller::addRadAway(const int& radaway_)
 
 void Dweller::useStimpak()
 {
-	++health_;
+	health_ + 20;
 }
 
 void Dweller::useRadAway()
 {
-	--radiation_;
+	radiation_ - 10;
 }
 
 Outfit* Dweller::assignOutfit(Outfit*)
