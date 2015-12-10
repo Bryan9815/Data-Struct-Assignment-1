@@ -24,3 +24,5 @@ int GameObject::getCount()
 {
 	return 0;
 }
+
+int GameObject::count = 0;

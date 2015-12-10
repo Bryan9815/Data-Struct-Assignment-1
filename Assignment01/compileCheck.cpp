@@ -24,7 +24,7 @@
 //	// test Dweller public functions
 //	d->getSPECIAL();
 //	d->getCurrentHealth();
-//	d->getCurrentRadDamage();
+//	d->receiveRadDamage(5);
 //	d->getAttackDmg();
 //	d->setPosition(currentPos);
 //	d->getPosition();

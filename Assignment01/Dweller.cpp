@@ -7,8 +7,6 @@ Dweller::Dweller()
 
 Dweller::Dweller(const string& kName, const int& SPECIAL_) : Outfit(*outfit_), Weapon(*weapon_)
 {
-	const string& kName = "Dweller";
-
 	
 }
 
@@ -19,6 +17,14 @@ Dweller::~Dweller()
 
 const int Dweller::getSPECIAL()
 {
+	int Luck = 0;
+	int Strength = 0;
+	int Perception = 0;
+	int Endurance = 0;
+	int Charisma = 0;
+	int Intelligence = 0;
+	int Agility = 0;
+
 	return SPECIAL_;
 }
 
@@ -50,11 +56,6 @@ const Vec2D Dweller::getPosition()
 
 void Dweller::receiveHealthDamage(const int& health_)
 {
-	if (health_ < 1)
-	{
-		cout << "Dweller has died" << endl;
-	}
-
 	if (health_ >(100 - radiation_))
 	{
 		this->health_ = (100 - radiation_);
@@ -97,20 +98,39 @@ void Dweller::addRadAway(const int& radaway_)
 
 void Dweller::useStimpak()
 {
-	health_ + 20;
+	health_ += 20;
 }
 
 void Dweller::useRadAway()
 {
-	radiation_ - 10;
+	radiation_ -= 10;
 }
 
 Outfit* Dweller::assignOutfit(Outfit*)
 {
 	Outfit* assignOutfit = 0;
+
+	return outfit_;
 }
 
 Weapon* Dweller::assignWeapon(Weapon*)
 {
 	Weapon* assignWeapon = 0;
+
+	return weapon_;
+}
+
+bool Dweller::isDead()
+{
+	if (health_ < 1)
+	{
+		bool isDead = true;
+		cout << "Dweller has died" << endl;
+	}
+	if (health_ > 1)
+	{
+		bool isDead = false;
+	}
+
+	return 0;
 }
