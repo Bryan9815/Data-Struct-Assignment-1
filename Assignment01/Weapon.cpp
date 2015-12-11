@@ -15,9 +15,16 @@ Weapon::~Weapon()
 
 }
 
-void Weapon::receiveDamage(const int&)
+void Weapon::receiveDamage(const int& durability_)
 {
-
+	for (int i = durability_; i;)
+	{
+		if (this->durability_ = i)
+		{
+			this->durability_ = (i / 2);
+			this->durability_ = durability_;
+		}
+	}
 }
 
 const int Weapon::getAttackDmg()

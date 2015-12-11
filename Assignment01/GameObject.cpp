@@ -22,7 +22,7 @@ string GameObject::getName(void)
 
 int GameObject::getCount()
 {
-	return 0;
+	return count;
 }
 
 int GameObject::count = 0;

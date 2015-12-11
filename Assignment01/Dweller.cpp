@@ -142,14 +142,14 @@ void Dweller::receiveRadDamage(const int& radiation_)
 	this->radiation_ = radiation_;
 }
 
-void Dweller::receiveEquipmentDamage(const int&)
+void Dweller::receiveEquipmentDamage(const int& durability_)
 {
-	
+	this->durability_ = durability_;
 }
 
-void Dweller::receiveDamage(const int&)
+void Dweller::receiveDamage(const int& durability_)
 {
-	
+	this->durability_ = durability_;
 }
 
 void Dweller::addStimpak(const int& stimpak_)
