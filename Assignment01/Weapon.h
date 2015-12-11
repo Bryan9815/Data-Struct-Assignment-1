@@ -3,12 +3,14 @@
 
 #include "Item.h"
 
-class Weapon : public Item
+class Weapon : virtual public Item
 {
 public:
 	Weapon();
 	Weapon(const string&, const int&, const int&);
 	~Weapon();
+
+	virtual void receiveDamage(const int&);
 
 	const int getAttackDmg();
 private:

@@ -3,12 +3,14 @@
 
 #include "Item.h"
 
-class Outfit : public Item
+class Outfit : virtual public Item
 {
 public:
 	Outfit();
 	Outfit(const string&, const int&, const int&);
 	~Outfit();
+
+	virtual void receiveDamage(const int&);
 
 	const int getSPECIAL();
 private:

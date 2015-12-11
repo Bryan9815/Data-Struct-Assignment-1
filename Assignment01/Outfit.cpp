@@ -15,6 +15,11 @@ Outfit::~Outfit()
 	
 }
 
+void Outfit::receiveDamage(const int&)
+{
+
+}
+
 const int Outfit::getSPECIAL()
 {
 	int Luck = 0;

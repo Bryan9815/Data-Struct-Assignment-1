@@ -3,14 +3,14 @@
 
 #include "GameObject.h"
 
-class Item : public GameObject
+class Item : virtual public GameObject
 {
 public:
 	Item();
 	Item(const string&, const int&);
 	~Item();
 
-	virtual void receiveDamage(const int &) = 0;
+	virtual void receiveDamage(const int& ) = 0;
 	const int getDurability();
 private:
 

@@ -5,7 +5,7 @@
 #include "Outfit.h"
 #include "Vec2D.h"
 
-class Dweller : public Outfit, Weapon
+class Dweller : virtual public Outfit, Weapon
 {
 public:
 	Dweller();
@@ -27,6 +27,8 @@ public:
 	void addRadAway(const int&);
 	void useStimpak();
 	void useRadAway();
+
+	virtual void receiveDamage(const int&);
 
 	Outfit* assignOutfit(Outfit*);
 	Weapon* assignWeapon(Weapon*);
