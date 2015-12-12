@@ -1,8 +1,14 @@
+/****************************************************************************/
+/*!
+
+*/
+/****************************************************************************/
+
 #include "GameObject.h"
 
 GameObject::GameObject()
 {
-	++count;
+	++count_;
 }
 
 GameObject::GameObject(const string& kName)
@@ -12,7 +18,7 @@ GameObject::GameObject(const string& kName)
 
 GameObject::~GameObject()
 {
-	--count;
+	--count_;
 }
 
 string GameObject::getName(void)
@@ -22,7 +28,7 @@ string GameObject::getName(void)
 
 int GameObject::getCount()
 {
-	return count;
+	return count_;
 }
 
-int GameObject::count = 0;
+int GameObject::count_ = 0;

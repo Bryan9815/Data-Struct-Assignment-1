@@ -4,9 +4,7 @@
 #include "Item.h"
 #include "GameObject.h"
 #include "Vec2D.h"
-
-void testNames();
-void shouldNotCompile();
+#include "main.h"
 
 int main()
 {
@@ -18,6 +16,4 @@ int main()
 	cout << d.getSPECIAL() << endl;
 	d.assignOutfit(&o);
 	cout << d.getSPECIAL() << endl;
-
-	return 0;
 }

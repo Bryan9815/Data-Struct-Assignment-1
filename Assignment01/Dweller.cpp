@@ -1,11 +1,23 @@
+/****************************************************************************/
+/*!
+
+*/
+/****************************************************************************/
+
 #include "Dweller.h"
+
+/****************************************************************************/
+/*!
+
+*/
+/****************************************************************************/
 
 Dweller::Dweller()
 {
 	
 }
 
-Dweller::Dweller(const string& kName, const int& SPECIAL_) : Outfit(*outfit_), Weapon(*weapon_)
+Dweller::Dweller(const string& kName, const int& SPECIAL_)
 {
 	
 }
@@ -17,76 +29,7 @@ Dweller::~Dweller()
 
 const int Dweller::getSPECIAL()
 {
-	int Luck = 0;
-	int Strength = 0;
-	int Perception = 0;
-	int Endurance = 0;
-	int Charisma = 0;
-	int Intelligence = 0;
-	int Agility = 0;
-
-	if (Luck < 0)
-	{
-		Luck = 0;
-	}
-	if (Luck > 9)
-	{
-		Luck = 9;
-	}
-
-	if (Strength < 0)
-	{
-		Strength = 0;
-	}
-	if (Strength > 9)
-	{
-		Strength = 9;
-	}
-
-	if (Perception < 0)
-	{
-		Perception = 0;
-	}
-	if (Perception > 9)
-	{
-		Perception = 9;
-	}
-
-	if (Endurance < 0)
-	{
-		Endurance = 0;
-	}
-	if (Endurance > 9)
-	{
-		Endurance = 9;
-	}
-
-	if (Charisma < 0)
-	{
-		Charisma = 0;
-	}
-	if (Charisma > 9)
-	{
-		Charisma = 9;
-	}
-
-	if (Intelligence < 0)
-	{
-		Intelligence = 0;
-	}
-	if (Intelligence > 9)
-	{
-		Intelligence = 9;
-	}
-
-	if (Agility < 0)
-	{
-		Agility = 0;
-	}
-	if (Agility > 9)
-	{
-		Agility = 9;
-	}
+	
 
 	return SPECIAL_;
 }
@@ -142,14 +85,14 @@ void Dweller::receiveRadDamage(const int& radiation_)
 	this->radiation_ = radiation_;
 }
 
-void Dweller::receiveEquipmentDamage(const int& durability_)
+void Dweller::receiveEquipmentDamage(const int& )
 {
-	this->durability_ = durability_;
+	
 }
 
-void Dweller::receiveDamage(const int& durability_)
+void Dweller::receiveDamage(const int& health_)
 {
-	this->durability_ = durability_;
+	this->health_ = health_;
 }
 
 void Dweller::addStimpak(const int& stimpak_)
@@ -174,14 +117,14 @@ void Dweller::useRadAway()
 	radiation_ -= 10;
 }
 
-Outfit* Dweller::assignOutfit(Outfit*)
+Outfit* Dweller::assignOutfit(Outfit* outfit_)
 {
 	Outfit* assignOutfit = 0;
 
 	return outfit_;
 }
 
-Weapon* Dweller::assignWeapon(Weapon*)
+Weapon* Dweller::assignWeapon(Weapon* weapon_)
 {
 	Weapon* assignWeapon = 0;
 
@@ -190,14 +133,15 @@ Weapon* Dweller::assignWeapon(Weapon*)
 
 bool Dweller::isDead()
 {
+	bool isDead;
 	if (health_ < 1)
 	{
-		bool isDead = true;
+		isDead = true;
 		cout << "Dweller has died" << endl;
 	}
 	if (health_ > 1)
 	{
-		bool isDead = false;
+		isDead = false;
 	}
 
 	return 0;

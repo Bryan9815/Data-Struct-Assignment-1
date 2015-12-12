@@ -4,6 +4,7 @@
 #include "Item.h"
 #include "GameObject.h"
 #include "Vec2D.h"
+#include "main.h"
 
 #include <vector>
 using std::vector;

@@ -4,19 +4,10 @@
 */
 /****************************************************************************/
 
-#include "Vec2D.h"
+#ifndef MAIN_H
+#define MAIN_H
 
-Vec2D::Vec2D()
-{
+void testNames();
+void shouldNotCompile();
 
-}
-
-Vec2D::Vec2D(double x, double y)
-{
-
-}
-
-Vec2D::~Vec2D()
-{
-
-}
+#endif

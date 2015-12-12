@@ -1,3 +1,13 @@
+/****************************************************************************/
+/*!
+\file Dweller.h
+\author Teh Kai Hong Bryan
+\par	email: 150587A@mymail.nyp.edu.sg
+\brief
+Header file containing Dweller Class
+*/
+/****************************************************************************/
+
 #ifndef DWELLER_H
 #define DWELLER_H
 
@@ -5,7 +15,14 @@
 #include "Outfit.h"
 #include "Vec2D.h"
 
-class Dweller : virtual public Outfit, Weapon
+/****************************************************************************/
+/*!
+			Class Dweller:
+\brief	A Class derived from Outfit and Weapon that contains functions and variables
+*/
+/****************************************************************************/
+
+class Dweller : public GameObject
 {
 public:
 	Dweller();
