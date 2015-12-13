@@ -1,6 +1,10 @@
 /****************************************************************************/
 /*!
-
+\file Dweller.cpp
+\author Teh Kai Hong Bryan
+\par	email: 150587A@mymail.nyp.edu.sg
+\brief
+Constructor, Destructor and Functions for the Dweller character
 */
 /****************************************************************************/
 
@@ -8,19 +12,49 @@
 
 /****************************************************************************/
 /*!
+\brief
+Constructor
 
+\param
+		kName - string that takes in the name of the Dweller
+		SPECIAL_ - takes in the values for the Dweller's stats
+
+\exception None
+\return None
 */
 /****************************************************************************/
 
 Dweller::Dweller(const string& kName, const int& SPECIAL_) : GameObject(kName), position_(0, 0), SPECIAL_(SPECIAL_), health_(100), radiation_(0), stimpak_(0), radaway_(0), outfit_(NULL), weapon_(NULL)
 {
-	cout << "Dweller: kName: " << kName << ", SPECIAL_: " << SPECIAL_ << endl;
+
 }
+
+/****************************************************************************/
+/*!
+\brief
+Destructor
+
+\param None
+\exception None
+\return None
+*/
+/****************************************************************************/
 
 Dweller::~Dweller()
 {
 	
 }
+
+/****************************************************************************/
+/*!
+\brief
+return a copy of SPECIAL_
+
+\param SPECIAL_ - takes in the values for the Dweller's stats
+\exception None
+\return None
+*/
+/****************************************************************************/
 
 const int Dweller::getSPECIAL()
 {
@@ -108,47 +142,106 @@ const int Dweller::getSPECIAL()
 		}
 		SPECIAL_ = (strength * 1000000) + (perception * 100000) + (endurance * 10000) + (charisma * 1000) + (intelligence * 100) + (agility * 10) + (luck * 1);
 		
-		cout << "d->getSPECIAL tested successfully" << endl;
 		return SPECIAL_;
 	}
 
 	if (outfit_ == 0)
 	{
-		cout << "d->getSPECIAL tested successfully" << endl;
 		return SPECIAL_;
 	}
 	return SPECIAL_;
 }
 
+/****************************************************************************/
+/*!
+\brief
+return a copy of health_
+
+\param health_ - takes in the value for the Dweller's health
+\exception None
+\return None
+*/
+/****************************************************************************/
+
 const int Dweller::getCurrentHealth()
 {
-	cout << "d->getCurrentHealth tested successfully: " << health_ << endl;
 	return health_;
 }
 
+/****************************************************************************/
+/*!
+\brief
+return a copy of radiation_
+
+\param radiation_ - takes in the value for the Dweller's radiation
+\exception None
+\return None
+*/
+/****************************************************************************/
+
 const int Dweller::CurrentRadDamage()
 {
-	cout << "d->CurrentRadDamage tested successfully: " << radiation_ << endl;
 	return radiation_;
 }
 
+/****************************************************************************/
+/*!
+\brief
+returns nothing
+
+\param None
+\exception None
+\return None
+*/
+/****************************************************************************/
+
 const int Dweller::getAttackDmg()
 {
-	cout << "d->getAttackDmg tested successfully" << endl;
 	return 0;
 }
 
+/****************************************************************************/
+/*!
+\brief
+sets a value for position_
+
+\param position_ - takes in the values for the Dweller's stats
+\exception None
+\return None
+*/
+/****************************************************************************/
+
 void Dweller::setPosition(const Vec2D& position_)
 {
-	cout << "d->setPosition tested successfully" << endl;
 	this->position_ = position_;
 }
 
+/****************************************************************************/
+/*!
+\brief
+return a copy of position_
+
+\param position_ - takes in the values for the Dweller's position
+\exception None
+\return None
+*/
+/****************************************************************************/
+
 const Vec2D Dweller::getPosition()
 {
-	cout << "d->getPosition tested successfully" << endl;
 	return position_;
 }
+
+/****************************************************************************/
+/*!
+\brief
+sets a value for health_
+
+\param health_ - takes in the value for the Dweller's health
+\exception None
+\return None
+*/
+/****************************************************************************/
 
 void Dweller::receiveHealthDamage(const int& health_)
 {
@@ -156,9 +249,19 @@ void Dweller::receiveHealthDamage(const int& health_)
 	{
 		this->health_ = (100 - radiation_);
 	}
-	cout << "d->receiveHealthDamage tested successfully: " << health_ << endl;
 	this->health_ = health_;
 }
+
+/****************************************************************************/
+/*!
+\brief
+set a value for radiation_
+
+\param radiation_ - takes in the value for the Dweller's radiation_
+\exception None
+\return None
+*/
+/****************************************************************************/
 
 void Dweller::receiveRadDamage(const int& radiation_)
 {
@@ -170,64 +273,162 @@ void Dweller::receiveRadDamage(const int& radiation_)
 	{
 		this->radiation_ = 0;
 	}
-	cout << "d->receiveRadDamage tested successfully: " << radiation_ << endl;
 	this->radiation_ = radiation_;
 }
 
+/****************************************************************************/
+/*!
+\brief
+set a value for durability_
+
+\param durability_ - takes in the value for the Equipment's durability_
+\exception None
+\return None
+*/
+/****************************************************************************/
+
 void Dweller::receiveEquipmentDamage(const int& durability_)
 {
-	cout << "d->receiveEquipmentDamage tested successfully: " << durability_ << endl;
+
 }
+
+/****************************************************************************/
+/*!
+\brief
+sets the value for how much health_ is lost
+
+\param health_ - takes in the value for the Dweller's health_
+\exception None
+\return None
+*/
+/****************************************************************************/
 
 void Dweller::receiveDamage(const int& health_)
 {
-	this->health_ = health_;
+	this->health_ -= health_;
 }
+
+/****************************************************************************/
+/*!
+\brief
+sets a value for stimpak_
+
+\param stimpak_ - takes in the value for the number of stimpaks
+\exception None
+\return None
+*/
+/****************************************************************************/
 
 void Dweller::addStimpak(const int& stimpak_)
 {
-	cout << "d->addStimpak tested successfully: " << stimpak_ << endl;
 	this->stimpak_ = stimpak_;
 }
 
+/****************************************************************************/
+/*!
+\brief
+sets a value for radaway_
+
+\param radaway_ - takes in the value for the number of radaway
+\exception None
+\return None
+*/
+/****************************************************************************/
+
 void Dweller::addRadAway(const int& radaway_)
 {
-	cout << "d->addRadAway tested successfully: " << radaway_ << endl;
 	this->radaway_ = radaway_;
 }
 
+/****************************************************************************/
+/*!
+\brief
+uses 1 stimpak_ and adds 20 to health_
+
+\param 
+		stimpak_ - takes in the value for the number of stimpaks
+		health_ - takes in the value for the Dweller's health_
+
+\exception None
+\return None
+*/
+/****************************************************************************/
+
 void Dweller::useStimpak()
 {
-	cout << "d->useStimpak tested successfully" << endl;
 	health_ += 20;
+	stimpak_ -= 1;
 }
+
+/****************************************************************************/
+/*!
+\brief
+uses 1 radaway and reduces radiation_ by 10
+
+\param 
+		radaway_ - takes in the value for the number of radaway
+		radiation_ - takes in the value for the Dweller's radiation_
+
+\exception None
+\return None
+*/
+/****************************************************************************/
 
 void Dweller::useRadAway()
 {
-	cout << "d->useRadAway tested successfully" << endl;
 	radiation_ -= 10;
+	radaway_ -= 1;
 }
+
+/****************************************************************************/
+/*!
+\brief
+return a copy of outfit_
+
+\param outfit_ - takes in the value for outfit
+\exception None
+\return None
+*/
+/****************************************************************************/
 
 Outfit* Dweller::assignOutfit(Outfit* outfit_)
 {
-	cout << "d->assignOufit tested successfully: " << outfit_ << endl;
 	return outfit_;
 }
 
+/****************************************************************************/
+/*!
+\brief
+return a copy of weapon_
+
+\param weapon_ - takes in the values for the Dweller's stats
+\exception None
+\return None
+*/
+/****************************************************************************/
+
 Weapon* Dweller::assignWeapon(Weapon* weapon_)
 {
-	cout << "d->assignWeapon tested successfully: " << weapon_ << endl;
 	return weapon_;
 }
 
+/****************************************************************************/
+/*!
+\brief
+return a copy of isDead
+
+\param isDead - a bool variable that determines if the Dweller is dead or alive
+\exception None
+\return None
+*/
+/****************************************************************************/
+
 bool Dweller::isDead()
 {
-	cout << "d->isDead tested successfully" << endl;
 	bool isDead;
 	if (health_ < 1)
 	{
 		isDead = true;
-		cout << "Dweller is dead" << endl;
 	}
 	if (health_ > 1)
 	{

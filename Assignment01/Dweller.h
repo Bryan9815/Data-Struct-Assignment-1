@@ -26,7 +26,7 @@ class Dweller : public GameObject
 {
 public:
 	Dweller(const string&, const int&);
-	~Dweller();
+	virtual ~Dweller();
 	
 	const int getSPECIAL();
 	const int getCurrentHealth();

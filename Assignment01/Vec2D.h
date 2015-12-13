@@ -13,12 +13,19 @@ Struct to define a position
 
 #include "GameObject.h"
 
+/******************************************************************************/
+/*!
+			Class Vector3:
+\brief	defines a 2D position
+*/
+/******************************************************************************/
+
 struct Vec2D
 {
 public:
 	Vec2D();
 	Vec2D(double, double);
-	~Vec2D();
+	virtual ~Vec2D();
 
 	double x;
 	double y;

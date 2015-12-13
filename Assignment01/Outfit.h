@@ -24,7 +24,7 @@ class Outfit : virtual public Item
 {
 public:
 	Outfit(const string&, const int&, const int&);
-	~Outfit();
+	virtual ~Outfit();
 
 	virtual void receiveDamage(const int&);
 

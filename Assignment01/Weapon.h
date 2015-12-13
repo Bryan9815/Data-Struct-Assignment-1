@@ -24,7 +24,7 @@ class Weapon : virtual public Item
 {
 public:
 	Weapon(const string&, const int&, const int&);
-	~Weapon();
+	virtual ~Weapon();
 
 	virtual void receiveDamage(const int&);
 
