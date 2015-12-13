@@ -13,7 +13,7 @@ Vec2D::Vec2D()
 
 Vec2D::Vec2D(double x, double y)
 {
-
+	cout << "Vec2D tested successfully: (" << x << ", " << y << ")" << endl;
 }
 
 Vec2D::~Vec2D()

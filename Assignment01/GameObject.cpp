@@ -1,19 +1,14 @@
+#include "GameObject.h"
+
 /****************************************************************************/
 /*!
 
 */
 /****************************************************************************/
 
-#include "GameObject.h"
-
-GameObject::GameObject()
+GameObject::GameObject(const string& kName) : kName(kName)
 {
 	++count_;
-}
-
-GameObject::GameObject(const string& kName)
-{
-
 }
 
 GameObject::~GameObject()
@@ -23,6 +18,7 @@ GameObject::~GameObject()
 
 string GameObject::getName(void)
 {
+	cout << "getName tested successfully: " << kName << endl;
 	return kName;
 }
 

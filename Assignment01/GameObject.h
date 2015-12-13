@@ -28,7 +28,6 @@ using std::string;
 class GameObject
 {
 public:
-	GameObject();
 	~GameObject();
 
 	string getName(void);

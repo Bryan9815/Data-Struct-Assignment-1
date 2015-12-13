@@ -8,6 +8,8 @@ Struct to define a position
 */
 /****************************************************************************/
 
+#include "GameObject.h"
+
 #ifndef VEC2D_H
 #define VEC2D_H
 

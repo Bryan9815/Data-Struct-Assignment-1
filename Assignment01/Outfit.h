@@ -23,7 +23,6 @@ Header file containing Outfit Class
 class Outfit : virtual public Item
 {
 public:
-	Outfit();
 	Outfit(const string&, const int&, const int&);
 	~Outfit();
 

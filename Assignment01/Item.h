@@ -23,7 +23,6 @@ Header file containing Item Class
 class Item : virtual public GameObject
 {
 public:
-	Item();
 	Item(const string&, const int&);
 	~Item();
 

@@ -4,7 +4,6 @@
 #include "Item.h"
 #include "GameObject.h"
 #include "Vec2D.h"
-#include "main.h"
 
 #include <vector>
 using std::vector;
@@ -25,7 +24,7 @@ void testNames()
 	// test Dweller public functions
 	d->getSPECIAL();
 	d->getCurrentHealth();
-	d->receiveRadDamage(5);
+	d->CurrentRadDamage();
 	d->getAttackDmg();
 	d->setPosition(currentPos);
 	d->getPosition();

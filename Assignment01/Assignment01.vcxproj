@@ -91,7 +91,6 @@
     <ClInclude Include="Dweller.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Item.h" />
-    <ClInclude Include="main.h" />
     <ClInclude Include="Outfit.h" />
     <ClInclude Include="Vec2D.h" />
     <ClInclude Include="Weapon.h" />

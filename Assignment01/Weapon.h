@@ -23,7 +23,6 @@ Header file containing Weapon Class
 class Weapon : virtual public Item
 {
 public:
-	Weapon();
 	Weapon(const string&, const int&, const int&);
 	~Weapon();
 

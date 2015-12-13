@@ -6,14 +6,9 @@
 
 #include "Weapon.h"
 
-Weapon::Weapon() : kAttackDmg(kAttackDmg)
+Weapon::Weapon(const string& kName, const int& durability_, const int& kAttackDmg) : GameObject(kName), Item(kName, durability_), kAttackDmg(kAttackDmg)
 {
-
-}
-
-Weapon::Weapon(const string& kName, const int& durability_, const int& kAttackDmg) : kAttackDmg(kAttackDmg)
-{
-
+	cout << "Weapon: kName: " << kName << ", durability_: " << durability_ << ", kAttackDmg: " << kAttackDmg << endl;
 }
 
 Weapon::~Weapon()
@@ -23,14 +18,8 @@ Weapon::~Weapon()
 
 void Weapon::receiveDamage(const int& durability_)
 {
-	for (int i = durability_; i;)
-	{
-		if (this->durability_ = i)
-		{
-			this->durability_ = (i / 2);
-			this->durability_ = durability_;
-		}
-	}
+	this->durability_ = durability_ / 2;
+	cout << "w->receiveDamage tested successfully: " << durability_ << endl;
 }
 
 const int Weapon::getAttackDmg()
@@ -39,5 +28,6 @@ const int Weapon::getAttackDmg()
 	{
 		const int kAttackDmg = 0;
 	}
+	cout << "w->getAttackDmg tested successfully" << endl;
 	return kAttackDmg;
 }
